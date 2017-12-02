@@ -1,0 +1,15 @@
+#!/bin/sh
+#SBATCH --nodes=1
+#SBATCH --cpus-per-task=16
+#SBATCH --time=12:00:00
+#SBATCH --mail-user=chrisfm@iastate.edu
+#SBATCH --mail-type=begin
+#SBATCH --mail-type=end
+#SBATCH --error=SRR.%J.err
+#SBATCH --output=SRR.%J.out
+
+module load sratoolkit
+## module load parallel
+
+## parallel --jobs 3 "fastq-dump --split-files --origfmt --gzip {}" ::: SRR.numbers
+tail -n +12 SRR.numbers | xargs -P 3 -I xx fastq-dump --split-files --gzip xx

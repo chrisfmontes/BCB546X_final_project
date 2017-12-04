@@ -1,0 +1,14 @@
+#!/bin/sh
+
+#SBATCH --nodes=1
+#SBATCH --cpus-per-task=16
+#SBATCH --time=4:00:00
+#SBATCH --mail-user=chrisfm@iastate.edu
+#SBATCH --mail-type=begin
+#SBATCH --mail-type=end
+#SBATCH --error=fastqc.%J.err
+#SBATCH --output=fastqc.%J.out
+
+module load fastqc
+
+ls input_files/*.gz | xargs -P 16 -I xx fastqc -o fastqc_out xx

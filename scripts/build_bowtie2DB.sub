@@ -1,0 +1,15 @@
+#!/bin/sh
+#SBATCH --nodes=1
+#SBATCH --cpus-per-task=16
+#SBATCH --time=2:00:00
+#SBATCH --mail-user=chrisfm@iastate.edu
+#SBATCH --mail-type=begin
+#SBATCH --mail-type=end
+#SBATCH --error=bowtie.%J.err
+#SBATCH --output=bowtie.%J.out
+
+cd $SLURM_SUBMIT_DIR
+
+module load bowtie2
+
+bowtie2-build chr1.fasta,chr2.fasta,chr3.fasta,chr4.fasta,chr5.fasta,chr6.fasta,chr7.fasta,chr8.fasta,chr9.fasta,chr10.fasta,chrMt.fasta,chrPt.fasta,chrUNKNOWN.fasta ZmAGPV2

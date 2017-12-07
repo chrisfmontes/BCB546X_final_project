@@ -27,5 +27,7 @@
 `run_tophat.sub`: Runs tophat aligner individually for each SRR accession. The job is going to ask for 5 nodes and 16 threads per node and is going to run for 20 hours or until complete, whatever happens first.  
   
 `run_tophat_rev.sub`: same as `run_tophat.sub` but starting from the last SRR accession, in order to run both script in parallel. The job is going to ask for 5 nodes and 16 threads per node and is going to run for 20 hours or until complete, whatever happens first. 
-
+  
+`run_htseq.sub`: run HTseq-counts for each aligned SRR accession using the obtaines `accepted_hits.bam` file. The job is going to ask for 1 nodes and 16 threads per node and is going to run for 20 hours or until complete, whatever happens first.  
+  
 `DESeq2.R`: Script to format the obtained raw counts table and get the differentially expressed genes using DESeq2.

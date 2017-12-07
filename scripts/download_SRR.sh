@@ -9,7 +9,5 @@
 #SBATCH --output=SRR.%J.out
 
 module load sratoolkit
-#module load parallel
 
-# parallel --jobs 3 "fastq-dump --split-files --origfmt --gzip {}" ::: SRR.numbers
 cat SRR.numbers | xargs -P 3 fastq-dump --split-files --gzip

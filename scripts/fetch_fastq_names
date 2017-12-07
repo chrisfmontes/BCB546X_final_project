@@ -1,0 +1,3 @@
+#!/bin/bash
+
+esearch -db sra -query PRJNA244661 | efetch --format runinfo |cut -d "," -f 1 > SRR.numbers

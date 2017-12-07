@@ -18,5 +18,5 @@ Transposable elements (TEs) have been shown to make up a large portion of many e
 
 4. Not a testicle
 
-![image alt text](image_0.jpg =200x35)
+![image alt text](image_0.jpg =200x)
 

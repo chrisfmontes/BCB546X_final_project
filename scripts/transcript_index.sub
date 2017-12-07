@@ -10,4 +10,4 @@
 
 module load tophat
 
-tophat -p 16 -o . -G ZmAGPV2.gff --transcriptome-index=ZmAGPV2_transc ZmAGPV2
+tophat -G databases/ZmAGPV2.gff --transcriptome-index=databases/ZmAGPV2_transc databases/ZmAGPV2

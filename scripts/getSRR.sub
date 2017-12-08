@@ -1,12 +1,12 @@
 #!/bin/sh
-#SBATCH --nodes=1
+#SBATCH --nodes=1 # number of nodes 
 #SBATCH --cpus-per-task=16
-#SBATCH --time=20:00:00
-#SBATCH --mail-user=chrisfm@iastate.edu
-#SBATCH --mail-type=begin
-#SBATCH --mail-type=end
-#SBATCH --error=SRR.%J.err
-#SBATCH --output=SRR.%J.out
+#SBATCH --time=20:00:00 # time reserved 
+#SBATCH --mail-user=chrisfm@iastate.edu # user
+#SBATCH --mail-type=begin # mail is sent when the job begins
+#SBATCH --mail-type=end # mail is sent when the job ends 
+#SBATCH --error=SRR.%J.err # send stderr to SRR.%J.err
+#SBATCH --output=SRR.%J.out #send stdout to SRR.%J.out
 
 module load sratoolkit #Loading the NCBI sra toolkit software
 

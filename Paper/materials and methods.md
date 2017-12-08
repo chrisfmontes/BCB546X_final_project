@@ -6,5 +6,13 @@ Maize seeding of three genotypes B73, Mo17, and Oh43 were grown under natural li
 
 For cold stress, seedlings were incubated at 5°C for 16 hours. For heat stress, seedlings were incubated at 50°C for 4 hours. For salt stress, plants were watered with 300 mM NaCl 20 hours prior to tissue collection. For UV stress, plants were subjected to UV  in the growth chamber conditions using UV-B lamps for 2 hours prior to tissue collection. Light conditions were the same for all stress and control conditions. 
 
-14 days after germination, six seedlings were pooled together for each sample and then tissue collected for RNA extraction. Three biological replicates were used for heat and cold treated genotypes and one biological replicate was used for UV and high salt stressed genotypes. 
+14 days after germination, six seedlings were pooled together for each sample and then tissue collected for RNA extraction. Three biological replicates were used for heat, cold treated genotypes and controls for the genotypes.  one biological replicate was used for UV , high salt stressed and c. control genotypes
+
+**RNA isolation and RNAseq analysis**
+
+RNA was isolated using Trizol and purified with LiCl. All RNA samples were prepared in accordance with the TruSeq library creation protocol (Illumina, San Diego, CA). Samples were sequenced on the HiSeq 2000 to develop 10–20 million reads per sample. 
+
+Transcript abundance was calculated by mapping reads to the combined transcript models of the maize reference genome (AGP v2) using TopHat software. Reads were filtered to allow for only uniquely mapped reads. RPKM values were developed using ‘BAM to Counts' across the exon space of the maize genome reference working gene set (ZmB73_5a) within the iPlant Discovery Environment.
+
+Genes were only considered expressed if RPKM>1 and differentially expressed if log2(stress/control)> 1 or log2(stress/control) <-1. Statistical significance of expression differences was determined using DeSeq package for all fully replicated samples.  
 

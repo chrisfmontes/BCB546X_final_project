@@ -20,7 +20,7 @@ Genes were only considered expressed if RPKM>1 and differentially expressed if l
 
 Every step of our data analysis was documented and files deposited on our group github repository [https://github.com/dormilon/BCB546X_final_project](https://github.com/dormilon/BCB546X_final_project) .  The repository was subdivided into directories or folder namely; - figures, paper,  fastqc_out, original_data, raw_tables, scripts and general readme. 
 
-Directory figures contained the all visual summaries made using R software, paper directory contained our group documentation (md), fastqc_out contained quality outputs, original_data contained the research article being studied and raw data used (*however, dataset too big to be uploaded in the github repository (~~~86gb), so we have the dataset stored on external hard drive*), raw_tables contained processed data summaries, scripts contained scripts ( with comments)  used for file inspection, processing and running the analysis. Above, we put readme in every directory describing what the directory is composed of. 
+Directory figures contained the all visual summaries made using R software, paper directory contained our group documentation (md), fastqc_out contained quality outputs, original_data contained the research article being studied and raw data used (*however, dataset too big to be uploaded in the github repository (~86GB), so we have our raw data stored on an external hard drive*), raw_tables contained processed data summaries, scripts contained scripts ( with comments)  used for file inspection, processing and running the analysis. Above, we put a readme in every directory describing what the directory is composed of. 
 
 ### **Results presentation **
 

@@ -1,14 +1,15 @@
-#!/bin/sh
-#SBATCH --nodes=1
-#SBATCH --cpus-per-task=16
-#SBATCH --time=2:00:00
-#SBATCH --mail-user=chrisfm@iastate.edu
-#SBATCH --mail-type=begin
-#SBATCH --mail-type=end
-#SBATCH --error=bowtie.%J.err
-#SBATCH --output=bowtie.%J.out
+#!/bin/sh # the sbatch script
+#SBATCH --nodes=1 # number of nodes
+#SBATCH --cpus-per-task=16 
+#SBATCH --time=2:00:00 # put time of reservation here
+#SBATCH --mail-user=chrisfm@iastate.edu # user
+#SBATCH --mail-type=begin # mail is sent when the job begins
+#SBATCH --mail-type=end # mail is sent when the job ends.
+#SBATCH --error=bowtie.%J.err # sends stderr to file  bowtie.%J.err
+#SBATCH --output=bowtie.%J.out # sends stdout to file bowtie.%J.out
 
-cd $SLURM_SUBMIT_DIR # changedir to SLURM_SUBMIT_DIR
+cd $SLURM_SUBMIT_DIR # changedir to SLURM_SUBMIT_DIR - i.e go to job submission directory
+
 
 
 module load bowtie2 # Loading the bowtie2 aligner to build the index for the reference genome

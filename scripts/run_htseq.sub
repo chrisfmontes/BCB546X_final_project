@@ -25,6 +25,3 @@ htseq-count -f bam -r pos -s no -i Parent ${fastq}/accepted_hits.bam databases/Z
 # taking `Parent` as the feature ID from the ZmAGPV2.gff annotation file. The output will be {SRRaccession}_counts.txt
 
 done
-
-
-

@@ -9,6 +9,9 @@
 #SBATCH --error=fastqc.%J.err
 #SBATCH --output=fastqc.%J.out
 
-module load fastqc
+module load fastqc # Load fastqc software
 
 ls input_files/*.gz | xargs -P 16 -I xx fastqc -o fastqc_out xx
+# List all the files that end in .gz inside the input_files folder then passes each of those file names as an argument to be
+# used with fastq. The -o argument sets the output directory to fastqc_out.
+# the xargs command with the -P 16 argument establish 16 parallel processes.

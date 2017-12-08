@@ -8,6 +8,11 @@
 #SBATCH --error=SRR.%J.err
 #SBATCH --output=SRR.%J.out
 
-module load sratoolkit
+module load sratoolkit #Loading the NCBI sra toolkit software
 
 cat SRR.numbers | xargs -P 6 -I xx fastq-dump --split-files --gzip xx
+# The "SRR.numbers" file should contain the list of SRR accessions to download. We pass each element of the file to the
+# fastq-dump function (function that download the fastq files for that SRR accession). The --split-files argument is used to
+# split paired-end reads into separate forward and reverse fastq files. The --gzip argument instruct the function to compress
+# the downloaded files.
+# Through the use of xargs we can run as many parallel process of fastq-dump as we state in the -P argument (6 for this case).

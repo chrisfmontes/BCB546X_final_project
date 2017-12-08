@@ -11,12 +11,21 @@
 module load tophat
 
 sample_info=sample_summary.txt
+# Specify the input sample file, where the SRR accession number is the first column
 
 sample=($(cut -f 1 "$sample_info"))
+# Create a bash array from the first column of $sample_info
 
 for fastq in ${sample[@]}
+# Go through each element of the $sample bash array
 do
 
 	tophat -o $fastq --num-threads=80 --solexa-quals --no-novel-juncs --transcriptome-index=databases/ZmAGPV2_transc/ZmAGPV2 --transcriptome-max-hits=1 databases/ZmAGPV2 input_files/${fastq}_1.fastq.gz input_files/${fastq}_2.fastq.gz
-
+# tophat will create an output directory for each element of the $sample_info array (-o argument)
+# tophat will use 80 processing threads (--num-threads argument)
+# we are telling tophat that the fastq files have a phred33 type quality score (--solexa-quals)
+# Use only the provided reference file for detecting transcripts(--no-novel-juncs argument)
+# Use the previously built transcriptome index in folder ZmAGPV2_transc (--transcriptome-index argument)
+# Use only reads that align 1 time to the reference transcriptome (--transcriptome-max-hits)
+# the last argument provided is the reference genome index and the input fastq files.
 done

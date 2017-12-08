@@ -8,6 +8,8 @@
 #SBATCH --error=tophat.%J.err
 #SBATCH --output=tophat.%J.out
 
-module load tophat
+module load tophat # Load tophat
 
 tophat -G databases/ZmAGPV2.gff --transcriptome-index=databases/ZmAGPV2_transc databases/ZmAGPV2
+# uses tophat to index the transcriptome file.
+# takes as imput the gff annotation file and a previously indexed reference genome.

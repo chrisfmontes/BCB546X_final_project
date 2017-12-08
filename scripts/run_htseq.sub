@@ -8,18 +8,21 @@
 #SBATCH --error=htseq.%J.err
 #SBATCH --output=htseq.%J.out
 
-module load python/2.7.12
+module load python/2.7.12 #oad this specific Python version to use HTSeq-count v0.9.1
 
 sample_info=sample_summary.txt
+# Specify the input sample file, where the SRR accession number is the first column
 
 sample=($(cut -f 1 "$sample_info"))
-
+# Create a bash array from the first column of $sample_info
 
 for fastq in ${sample[@]}
-
+# Go through each element of the $sample bash array
 do
 
 htseq-count -f bam -r pos -s no -i Parent ${fastq}/accepted_hits.bam databases/ZmAGPV2.gff > ${fastq}_counts.txt
+# run htseq-count on a bam file (-f argument), sorted by coordinate (-r argument), unstranded (-s argument),
+# taking `Parent` as the feature ID from the ZmAGPV2.gff annotation file. The output will be {SRRaccession}_counts.txt
 
 done
 

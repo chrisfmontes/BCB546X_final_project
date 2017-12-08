@@ -10,6 +10,10 @@
 
 cd $SLURM_SUBMIT_DIR
 
-module load bowtie2
+
+module load bowtie2 # Loading the bowtie2 aligner to build the index for the reference genome
+
 
 bowtie2-build chr1.fasta,chr2.fasta,chr3.fasta,chr4.fasta,chr5.fasta,chr6.fasta,chr7.fasta,chr8.fasta,chr9.fasta,chr10.fasta,chrMt.fasta,chrPt.fasta,chrUNKNOWN.fasta ZmAGPV2
+# Runing bowtie2-build to index the reference genome. Here the genome is provided as a set of fasta files, one for each
+# chromosome. The final argument is the index name (ZmAGPV2)

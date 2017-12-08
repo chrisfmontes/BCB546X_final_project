@@ -1,3 +1,7 @@
+# this is a perl script that splits in two a fastq file. Each new file wil have one half of the seqence and the
+# corresponding quality values
+# To use it you must provide the fastq file to be split
+
 use strict;
 use warnings;
 my $file = $ARGV[0];

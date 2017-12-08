@@ -6,5 +6,5 @@ Maize seeding of three genotypes B73, Mo17, and Oh43 were grown under natural li
 
 For cold stress, seedlings were incubated at 5°C for 16 hours. For heat stress, seedlings were incubated at 50°C for 4 hours. For salt stress, plants were watered with 300 mM NaCl 20 hours prior to tissue collection. For UV stress, plants were subjected to UV  in the growth chamber conditions using UV-B lamps for 2 hours prior to tissue collection. Light conditions were the same for all stress and control conditions. 
 
-14 days after germination, six seedlings were pooled together for each sample and then tissue collected for RNA extraction.  
+14 days after germination, six seedlings were pooled together for each sample and then tissue collected for RNA extraction. Three biological replicates were used for heat and cold treated genotypes and one biological replicate was used for UV and high salt stressed genotypes. 
 

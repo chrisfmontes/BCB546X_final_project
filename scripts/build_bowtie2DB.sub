@@ -8,7 +8,7 @@
 #SBATCH --error=bowtie.%J.err
 #SBATCH --output=bowtie.%J.out
 
-cd $SLURM_SUBMIT_DIR 
+cd $SLURM_SUBMIT_DIR # changedir to SLURM_SUBMIT_DIR
 
 
 module load bowtie2 # Loading the bowtie2 aligner to build the index for the reference genome

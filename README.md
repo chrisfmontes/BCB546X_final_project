@@ -8,4 +8,5 @@ This repository contains the following folders:
 **Paper:** Here you will find the paper describing our reproduction of the original paper's experiment.  
 **fastqc_out:** Here you will find the quality check analysis for each fastq file.  
 **original_data:** Here you will find any data file that comes from the original paper's authors, including the original paper.  
-**
+**Scripts:** Here you will find all the scripts created and borrowed in order to perform our analysis.  
+**tables_and_data:** Here you will find the tables and data obtained from our analysis.

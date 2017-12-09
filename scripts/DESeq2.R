@@ -1,5 +1,8 @@
+## Begin of the DESeq2 analysis script ##
+
 # Loading required libraries
-if (!require("DESeq2")) install.packages("DESeq2") # install DESeq2 if it's not already installed
+# install DESeq2 library if it is not installed already
+if (!require("DESeq2")) install.packages("DESeq2")
 library("DESeq2")
 if (!require("gplots")) install.packages("gplots")
 library("gplots")

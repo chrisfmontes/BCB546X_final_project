@@ -1,6 +1,6 @@
 #!/bin/bash
 sample_info=sample_summary.txt
-sample=($(cut -f 1 "$sample_info" | tail -n +2| head -n 4))
+sample=($(cut -f 1 "$sample_info"))
 
 for fastq in ${sample[@]}
 do
@@ -9,3 +9,4 @@ do
 done
 cp SRR1238715_counts.txt counts.txt
 cp SRR1238715_counts.bak SRR1238715_counts.txt
+cut -f2 -d' ' --complement counts.txt > /tmp/out && mv /tmp/out counts.txt

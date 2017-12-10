@@ -66,6 +66,8 @@ Our group reproduced a large-scale transcriptomic analysis of three maize genoty
 
 3. Our map had slightly different clustering of the genotypes (ie. B73 clustered more closely with Mo17 during heat stress compared to Oh43)
 
+You can find the figures in the figure directory. 
+
 **Conclusions**
 
 **Things We Learned**

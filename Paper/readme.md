@@ -1,4 +1,1 @@
-description of the paper directory
-contains our group documentation of the paper 
->>> MAKAREVITCH-2015.md has the introduction, technical details done by our group
->>> materials and methods.md has the methods and material used in the paper and our group document 
+A directory containing the paper of interest Markevitch et al which we replicated for our project and the final paper required by the instructors.
